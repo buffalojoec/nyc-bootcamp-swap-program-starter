@@ -1,0 +1,19 @@
+[features]
+seeds = true
+skip-lint = false
+
+[programs.devnet]
+swap_program = "7832S4UAeNDGrqMSiZqhL5mqo9Xh1ytHKfcPe6AJapSi"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "/Users/joesol/.config/solana/id.json"
+
+[scripts]
+upload-json = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/upload-json.test.ts"
+create-assets = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/create-assets.test.ts"
+test = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/main.test.ts"
+master = "yarn run ts-mocha -p ./tsconfig.json -t 1000000 tests/master.test.ts"
